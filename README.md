@@ -28,6 +28,10 @@
 
 5. Open the browser, and go to http://localhost:8081
 
+# loom recoding link:
+
+https://www.loom.com/share/c03cee39715f49338261bf656b6375e0?sid=a5c1e99c-bff8-4d76-aa59-f73e7656c5f4
+
 # Approaches
 
 Due to the data dependency chain, For example, to get someone's order detail, we will need
