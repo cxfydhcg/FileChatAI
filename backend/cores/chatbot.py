@@ -92,10 +92,9 @@ def get_file_hint_stream_helper() -> str:
                 stream=True,
             )
         for event in stream:
-            logger.info(f"Stream event {event}")
             if isinstance(event, ResponseTextDeltaEvent):
-                logger.info(f"Stream event {event.delta}")
                 yield event.delta
+                
     return generate(), {"Content-Type": "text/event-stream"}
 
 

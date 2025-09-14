@@ -27,9 +27,7 @@ embeddings = OllamaEmbeddings(model="mxbai-embed-large", base_url=os.getenv("OLL
 file_location = "./files"
 
 def create_vector_store(file_name: str) -> None:
-    if file_name.split(".")[0] in _all_vector_store_info:
-        logger.info(f"Vector store {file_name.split('.')[0]} already exists")
-        return
+
     file_path = os.path.join(file_location, file_name)
     # Create vector store for each file
     df = pd.read_csv(file_path)

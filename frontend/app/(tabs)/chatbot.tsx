@@ -29,7 +29,12 @@ export default function Chatbot() {
     // add placeholder bot message
     setMessages((prev) => [
       ...prev,
-      { id: botId, text: "", type: "bot", timestamp: new Date() },
+      {
+        id: botId,
+        text: "🤖 Getting the information...",
+        type: "bot",
+        timestamp: new Date(),
+      },
     ]);
 
     getFilesHintStream(
@@ -48,7 +53,12 @@ export default function Chatbot() {
     // add placeholder bot message
     setMessages((prev) => [
       ...prev,
-      { id: botId, text: "", type: "bot", timestamp: new Date() },
+      {
+        id: botId,
+        text: "🤖 Getting the answer...",
+        type: "bot",
+        timestamp: new Date(),
+      },
     ]);
     getAnswerStream(
       input,
