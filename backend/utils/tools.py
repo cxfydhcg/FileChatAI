@@ -41,6 +41,7 @@ def filter_csv_pandas(file_name, column_name, target_value) -> list[dict]:
 
 @function_tool
 def generate_answer_for_file(question: str) -> dict:
+    logger.info(f"Generate answer for file: {question}")
     """
     Use this tool to fetch data from specific, individual files. (e.g., a ticket number, an inventory ID, or a customer ID)
     Limitation: This tool can only retrieve one piece of data at a time. It cannot automatically find connections between different files (e.g., find all orders for a customer named "Amy").
@@ -91,6 +92,7 @@ def generate_answer_for_file(question: str) -> dict:
 
 @function_tool
 def generate_answer_for_order(question: str) -> dict:
+    logger.info(f"Generate answer for order: {question}")
     """
     Use this tool to access all of the data related to a user, including the inventory, order, and price data
     You must provide the user infomation (e.g., customer name, customer ID, email, etc)
